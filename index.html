@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <style>
+    html {
+      font-family:"SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;font-size:106.25%;quotes:"“" "”"
+    }
+    body{
+      /* background-color: #fff9f2; */
+    }
+    .container{
+        width:980px;
+        margin:0 auto;
+    }
+    .head_bg_img{
+      background-image: url("./head_image.jpg");
+      background-size: cover;
+      height: 300px;
+      position: relative;
+    }
+    .icon_img{
+      border-radius: 50%;
+      border: dimgray 1px solid;
+      background-color: white;
+      width: 150px;
+      background-image: url("./woman.png");
+      background-size: cover;
+      height: 150px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    h1{
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: slategrey 1px solid;
+    }
+    .header{
+      width:980px;
+      margin:0 auto;
+    }
+    .tab{
+      display:inline-block;
+      padding: 10px;
+    }
+    .tab:hover{
+      cursor : pointer;
+      background-color: gainsboro;
+    }
+    .contents{
+      background-color: #f1f2f5;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .contents_body{
+      background-color: white;
+      width:980px;
+      margin:0 auto;
+      border-radius: 10px;
+    }
+    .contact_icon{
+      margin:0px 5px;
+    }
+    .content{
+      min-height: 300px;
+      padding: 10px;
+    }
+  </style>
+  <script>
+    function changeTag(e){
+      $(".content").hide();
+      $("#"+e).show();
+    }
+    $(function(){
+      $(".content").hide();
+      $("#content1").show();
+    });
+    // document.getElementById("tab1").onclick = 
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="head_bg_img">
+      <div class="icon_img">
+      </div>  
+    </div>
+    <h1>西野　はるか</h1>
+  </div>
+  <div class="content_body">
+    <div class="header">
+      <div class="tab" onclick="changeTag('content1')">概要</div>
+      <div class="tab" onclick="changeTag('content2')">ブログ</div>
+      <div class="tab" onclick="changeTag('content3')">コンタクト</div>
+    </div>
+  </div>
+  <div class="contents">
+    <div class="contents_body">
+      <div id="content1" class="content">
+        はじめまして<br>
+        サイトに訪問いただきありがとうございます。 <br><br>
+        結婚相談所と聞くと、堅苦しいイメージありますよね？<br>
+        Balloon Marriageは私が20代と言うこともありあり、20代の方でも入りやすい結婚相談所となっています。<br>
+        あなたに寄り添いながら、一緒に結婚までの道のりを頑張らせてもらえませんか？<br>
+        詳しくはブログをご覧になっていただけるとわかりますので、ぜひ覗いてみてください。<br><br>
+        気軽にお問い合わせいただけると嬉しいです。  
+      </div>
+      <div id="content2" class="content">
+        <iframe src="https://ameblo.jp/nharuka202012/" width="100%" height="1000px"></iframe>
+      </div>
+      <div id="content3" class="content">
+        連絡先<br>
+        <span class="email">
+          <img class="contact_icon" src="./email.svg" width="20px"/>nharuka202012@gmail.com
+        </span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
