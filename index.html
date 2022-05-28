@@ -10,7 +10,7 @@
     html {
       font-family:"SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;font-size:106.25%;quotes:"“" "”"
     }
-    body{
+    body {
       /* background-color: #fff9f2; */
     }
     .container{
@@ -48,14 +48,22 @@
     .header{
       max-width:980px;
       margin:0 auto;
+      margin-top: 5px;
     }
     .tab{
       display:inline-block;
       padding: 10px;
+      border: 1px solid #ffb6c1;
+      margin: 1px;
+      border-radius: 4px;
+    }
+    .tab.active {
+      background-color: #ffb6c1;
+      color: white;
     }
     .tab:hover{
       cursor : pointer;
-      background-color: gainsboro;
+      /* background-color: gainsboro; */
     }
     .contents{
       background-color: #f1f2f5;
@@ -85,7 +93,9 @@
   <script>
     function changeTag(e){
       $(".content").hide();
-      $("#"+e).show();
+      $("#content"+e).show();
+      $('.tab').removeClass('active');
+      $("#tab"+e).addClass('active');
     }
     $(function(){
       $(".content").hide();
@@ -106,11 +116,11 @@
   </div>
   <div class="content_body">
     <div class="header">
-      <div class="tab" onclick="changeTag('content1')">あいさつ</div>
-      <div class="tab" onclick="changeTag('content2')">入会までの流れ</div>
-      <div class="tab" onclick="changeTag('content3')">ブログ</div>
-      <div class="tab" onclick="changeTag('content4')">料金表</div>
-      <div class="tab" onclick="changeTag('content5')">コンタクト</div>
+      <div class="tab active" onclick="changeTag('1')" id="tab1">あいさつ</div>
+      <div class="tab" onclick="changeTag('2')" id="tab2">入会までの流れ</div>
+      <div class="tab" onclick="changeTag('3')" id="tab3">ブログ</div>
+      <div class="tab" onclick="changeTag('4')" id="tab4">料金表</div>
+      <div class="tab" onclick="changeTag('5')" id="tab5">コンタクト</div>
     </div>
   </div>
   <div class="contents">
